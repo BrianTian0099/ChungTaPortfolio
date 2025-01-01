@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
+  overflow: hidden;
   background-color: black;
   color: white;
 }
 
-#root {
-  width: 100%;
-  overflow: hidden;
+section {
+  width: 100vw;
+  height: 100vh;
 }
