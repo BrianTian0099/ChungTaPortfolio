@@ -1,47 +1,39 @@
 .hero {
     height: 900px;
-    background: url('head.png') no-repeat center center/cover;
+    background-color: #000000; /* 深黑色背景 */
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    animation: moveBg 20s linear infinite;
-  }
-  
-  @keyframes moveBg {
-    0% {
-      background-position: center top;
-    }
-    100% {
-      background-position: center bottom;
-    }
   }
   
   .profile-photo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 150px;
-    height: 150px;
-    background-color: white;
-    color: black;
-    font-size: 18px;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff; /* 白色大頭照框 */
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    font-weight: bold;
   }
   
-  .hero h1 {
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .hero-content h1 {
     font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    color: #ffffff; /* 白色文字 */
+    margin-bottom: 10px;
   }
   
-  .hero p {
-    font-size: 1.8rem;
-    color: #ccc;
+  .hero-content p {
+    font-size: 1.5rem;
+    color: #b3b3b3; /* 淡灰色文字 */
   }
+  

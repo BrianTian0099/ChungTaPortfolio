@@ -1,7 +1,7 @@
+
 import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
 import ArticlesSection from './components/ArticlesSection';
-import ContactSection from './components/ContactSection';
 
 function App() {
   return (
@@ -9,7 +9,6 @@ function App() {
       <HeroSection />
       <ProjectsSection />
       <ArticlesSection />
-      <ContactSection />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 .articles {
     height: 900px;
-    background-color: black;
+    background-color: #000000; /* 黑色背景 */
     padding: 60px;
   }
   
-  .articles-title {
+  .articles h2 {
     font-size: 2.5rem;
+    color: #ffffff; /* 白色標題 */
     margin-bottom: 40px;
   }
   
@@ -16,7 +17,10 @@
   }
   
   .article-card {
-    background-color: #222;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff; /* 白色卡片背景 */
+    border: 1px solid #333333; /* 深灰色邊框 */
     padding: 20px;
     border-radius: 8px;
     text-align: left;
@@ -24,26 +28,33 @@
   
   .article-card h3 {
     font-size: 1.5rem;
+    color: #000000; /* 黑色標題 */
+    margin-bottom: 10px;
   }
   
   .article-card .date {
     font-size: 0.9rem;
-    color: #888;
+    color: #888888; /* 灰色日期 */
+    margin-bottom: 10px;
   }
   
   .article-card p {
-    margin: 10px 0;
+    font-size: 1rem;
+    color: #666666; /* 淺灰色描述 */
+    margin-bottom: 15px;
   }
   
   .article-card .read-button {
-    background-color: #00ff00;
-    color: #000;
-    text-decoration: none;
+    background-color: #00ff00; /* 亮綠色按鈕 */
+    color: #000000;
     padding: 10px 20px;
-    display: inline-block;
+    text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
   }
   
   .article-card .read-button:hover {
-    background-color: #00cc00;
+    background-color: #00cc00; /* 深綠色按鈕 */
   }
+  

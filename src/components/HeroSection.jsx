@@ -1,8 +1,8 @@
 const HeroSection = () => {
     return (
-      <section className="hero">
+      <section className="hero" >
         <div className="profile-photo">
-          <img src="/assets/head.png" alt="田仲达头像" />
+          <img src="https://raw.githubusercontent.com/BrianTian0099/ChungTaPortfolio/refs/heads/main/src/assets/head.png?token=GHSAT0AAAAAAC4TSNYVFLYXGTSZPLHFRIFUZ3UF3QA" />
         </div>
         <div className="hero-content">
           <h1>跨領域設計師</h1>

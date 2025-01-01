@@ -1,55 +1,56 @@
-.articles {
-    height: 900px;
-    background-color: black;
-    color: white;
-    padding: 60px;
-  }
-  
-  .articles h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-align: left;
-  }
-  
-  .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .article-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left;
-  }
-  
-  .article-card h3 {
-    font-size: 1.5rem;
-  }
-  
-  .article-card .date {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 10px;
-  }
-  
-  .article-card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .article-card .read-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00ff00;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .article-card .read-button:hover {
-    background-color: #00cc00;
-  }
+.projects {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.projects-container {
+  display: flex;
+  width: 400%;
+  transition: transform 0.5s ease;
+}
+
+.project {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.project h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.project p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #00ff00;
+  transition: width 0.3s ease;
+}
