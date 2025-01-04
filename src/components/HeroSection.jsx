@@ -1,15 +1,19 @@
+import "./HeroSection.css";
+
 const HeroSection = () => {
-    return (
-      <section className="hero" >
-        <div className="profile-photo">
-          <img src="https://github.com/BrianTian0099/ChungTaPortfolio/blob/9d85a0907be544cbc81fabd5d0ce14d57b0c5d3e/src/assets/head.png" />
-        </div>
-        <div className="hero-content">
-          <h1>跨領域設計師</h1>
-          <p>田仲達</p>
-        </div>
-      </section>
-    );
-  };
-  
-  export default HeroSection;
+  const profileImage = "https://raw.githubusercontent.com/BrianTian0099/ChungTaPortfolio/refs/heads/main/src/assets/head.png?token=GHSAT0AAAAAAC4TSNYUJQ5D3DRPA6R2CCFKZ3Y7TSQ";
+
+  return (
+    <section className="hero">
+      <div className="image-container">
+        <img src={profileImage} alt="Profile" style={{ borderRadius: "50%", width: "200px", height: "200px" }} />
+      </div>
+      <div className="text-content">
+        <h1>Brian Tian</h1>
+        <p>Bridging industrial design and UI/UX to craft exceptional interactive experiences.</p>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

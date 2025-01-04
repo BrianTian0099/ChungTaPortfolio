@@ -1,0 +1,59 @@
+/* HeroSection.css */
+
+/* 主容器样式 */
+.hero {
+  display: flex;
+  flex-direction: column; /* 调整为列布局以适应小屏幕 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px; /* 更紧凑的内边距 */
+  background: linear-gradient(to bottom, #eeeeee, #e9e6e6);
+  color: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* 文本内容 */
+.text-content {
+  text-align: center; /* 小屏幕时居中显示文本 */
+  margin: 20px 0;
+  width: 90%; /* 自适应宽度 */
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+  font-weight: 700;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* 大屏幕特定样式 */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* 大屏幕时恢复为行布局 */
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .text-content {
+    text-align: left;
+    margin-left: 30px;
+    width: 700px;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-content p {
+    font-size: 1.6rem;
+  }
+}

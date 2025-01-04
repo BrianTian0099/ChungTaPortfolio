@@ -1,83 +1,79 @@
-.projects {
+.projects-section {
+  position: relative;
   height: 100vh;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #eeeeee, #e9e6e6);
+  overflow: hidden;
+}
+
+.carousel {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: relative;
+  height: 60%;
+  width: 80%;
 }
 
-.projects-container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.5;
 }
 
-.project {
-  flex: 0 0 100%;
-  height: 100%;
+.carousel-item.active {
+  opacity: 1;
+}
+
+.project-card {
+  background: white;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.project h2 {
-  font-size: 3rem;
-  color: white;
+.project-card h2 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.project p {
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 2rem;
+.project-card p {
+  font-size: 1rem;
+  color: #666;
 }
 
-/* 左右切换按钮样式 */
+/* 按钮样式 */
 .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 10;
   border-radius: 5px;
+  z-index: 10;
 }
 
-.left-button {
+.nav-button.left {
   left: 20px;
 }
 
-.right-button {
+.nav-button.right {
   right: 20px;
 }
 
 .nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.progress-bar {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 5px;
-  background-color: #333;
-}
-
-.progress-bar-inner {
-  height: 100%;
-  background-color: #00ff00;
-  transition: width 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.8);
 }
