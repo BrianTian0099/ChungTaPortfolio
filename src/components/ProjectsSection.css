@@ -1,79 +1,145 @@
 .projects-section {
-  position: relative;
   height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #eeeeee, #e9e6e6);
+  justify-content: center;
+  position: relative;
+  background-color: #f5f5f5;
   overflow: hidden;
 }
 
 .carousel {
   display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
   align-items: center;
   justify-content: center;
-  position: relative;
-  height: 60%;
-  width: 80%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.project-container {
+  width: 80%; /* 大容器占屏幕的 80% */
+  height: 90%; /* 容器高度占屏幕 90% */
+  display: flex;
+  flex-direction: column; /* 改为纵向布局 */
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0.5;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 
-.carousel-item.active {
-  opacity: 1;
+.card {
+  width: 100%; /* 图片卡片宽度占容器 100% */
+  height: 60%; /* 图片卡片高度占容器 60% */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd; /* 分隔线 */
 }
 
-.project-card {
-  background: white;
-  width: 300px;
-  height: 400px;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 图片等比填满 */
+}
+
+.project-info {
+  width: 90%; /* 信息区域宽度占容器 90% */
+  height: 40%; /* 信息区域高度占容器 40% */
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  text-align: center; /* 文字居中 */
 }
 
-.project-card h2 {
+.project-info h2 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
+  color: #333;
 }
 
-.project-card p {
+.project-info h3 {
   font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.project-info p {
+  font-size: 0.9rem;
   color: #666;
 }
 
-/* 按钮样式 */
+/* 左右切换按钮样式 */
 .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 5px;
   z-index: 10;
+  border-radius: 5px;
 }
 
-.nav-button.left {
+.left {
   left: 20px;
 }
 
-.nav-button.right {
+.right {
   right: 20px;
 }
 
 .nav-button:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* RWD 样式 */
+@media screen and (max-width: 768px) {
+  .project-container {
+    width: 80%; /* 保持宽度为屏幕 80% */
+    height: 90%; /* 容器高度 */
+    flex-direction: column; /* 纵向布局 */
+  }
+
+  .card {
+    height: 60%; /* 图片区域占容器 60% */
+    border-bottom: 1px solid #ddd; /* 分隔线 */
+  }
+
+  .project-info {
+    width: 100%; /* 文字区域占宽度 */
+    height: 40%; /* 文字区域占容器 40% */
+    padding: 5px;
+    text-align: center; /* 文字居中 */
+  }
+
+  .project-info h2 {
+    font-size: 1.2rem; /* 缩小标题字体 */
+    margin-bottom: 5px;
+  }
+
+  .project-info h3 {
+    font-size: 0.9rem; /* 缩小副标题字体 */
+    margin-bottom: 5px;
+  }
+
+  .project-info p {
+    font-size: 0.8rem; /* 缩小描述文字 */
+  }
+
+  .nav-button {
+    font-size: 1.2rem; /* 调整按钮大小 */
+    padding: 8px 16px;
+  }
 }
