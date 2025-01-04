@@ -1,7 +1,7 @@
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const profileImage = "https://raw.githubusercontent.com/BrianTian0099/ChungTaPortfolio/refs/heads/main/src/assets/head.png?token=GHSAT0AAAAAAC4TSNYUJQ5D3DRPA6R2CCFKZ3Y7TSQ";
+  const profileImage = "https://raw.githubusercontent.com/BrianTian0099/ChungTaPortfolio/refs/heads/main/src/assets/head2.png?token=GHSAT0AAAAAAC4TSNYUDVALXRO2M33TJ2IKZ3ZAYEA";
 
   return (
     <section className="hero">
