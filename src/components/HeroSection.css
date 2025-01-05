@@ -1,5 +1,3 @@
-/* HeroSection.css */
-
 /* 主容器样式 */
 .hero {
   display: flex;
@@ -7,13 +5,14 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 120px; /* 更紧凑的内边距 */
-  background: linear-gradient(to bottom, #eeeeee, #e9e6e6);
-  color: rgb(0, 0, 0);
+  padding: 0 120px; /* 控制左右的內距，讓內容不緊貼邊緣 */
+  /* background: linear-gradient(to bottom, #eeeeee, #e9e6e6); */
+  background-color: black;
+  color: rgb(240, 240, 240);
   font-family: Arial, sans-serif;
   position: relative;
 }
-profile-image
+
 /* 图片容器 */
 .image-container {
   position: relative;
@@ -22,6 +21,16 @@ profile-image
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px; /* 控制圖片與文字的垂直間距，減小此值讓它們靠近 */
+}
+
+/* 透明图片 */
+.profile-image {
+  position: relative;
+  z-index: 2; /* 保证图片在圆形上方 */
+  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%; /* 自定义圆角 */
+  width: 300px;
+  height: 300px;
 }
 
 /* 重叠的圆形 */
@@ -48,19 +57,11 @@ profile-image
   z-index: 0;
 }
 
-/* 透明图片 */
-.profile-image {
-  position: relative;
-  z-index: 2; /* 保证图片在圆形上方 */
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%; /* 自定义圆角 */
-  width: 300px;
-  height: 300px;
-}
-
 /* 文本内容 */
 .text-content {
   text-align: center; /* 小屏幕时居中显示文本 */
-  margin: 20px 0;
+  margin-top: 0px; /* 控制文字與圖片的距離，調整此值讓文字更接近圖片 */
+  margin-bottom: 20px; /* 控制文字與下方內容的距離 */
   width: 90%; /* 自适应宽度 */
 }
 
@@ -73,7 +74,7 @@ profile-image
 
 .text-content p {
   font-size: 1.2rem;
-  margin: 10px 0 0;
+  margin: 10px 0 0; /* 上方間距是10px，可調整為更小以貼近標題 */
   font-weight: 400;
   text-align: left;
 }
@@ -82,14 +83,20 @@ profile-image
 @media (min-width: 768px) {
   .hero {
     flex-direction: row; /* 大屏幕时恢复为行布局 */
-    justify-content: space-between;
+    justify-content: center; /* 调整为水平居中，使圖片與文字靠近 */
+    gap: 100px; /* 圖片與文字的水平間距 */
     padding: 0 50px;
+  }
+
+  .image-container {
+    margin-bottom: 0px; /* 大屏幕下讓圖片與文字的間距更小 */
   }
 
   .text-content {
     text-align: left;
-    margin-left: 30px;
-    width: 700px;
+    margin-left: 30px; /* 控制文字與圖片的水平距離 */
+    margin-top: 0; /* 去掉垂直間距 */
+    width: 500px; /* 限制文字寬度，避免太靠邊 */
   }
 
   .text-content h1 {
