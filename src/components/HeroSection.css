@@ -1,13 +1,14 @@
+/* HeroSection.css */
+
 /* 主容器样式 */
 .hero {
   display: flex;
-  flex-direction: column; /* 调整为列布局以适应小屏幕 */
+  flex-direction: column; /* 小屏幕垂直布局 */
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 120px; /* 控制左右的內距，讓內容不緊貼邊緣 */
-  /* background: linear-gradient(to bottom, #eeeeee, #e9e6e6); */
-  background-color: black;
+  padding: 0 20px; /* 縮小內邊距以適配小屏幕 */
+  background-color: rgb(36, 34, 34);
   color: rgb(240, 240, 240);
   font-family: Arial, sans-serif;
   position: relative;
@@ -16,21 +17,21 @@
 /* 图片容器 */
 .image-container {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 200px; /* 縮小圖片容器寬度 */
+  height: 200px; /* 縮小圖片容器高度 */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px; /* 控制圖片與文字的垂直間距，減小此值讓它們靠近 */
+  margin-bottom: 10%; /* 增大圖片與文字的垂直距離 */
 }
 
 /* 透明图片 */
 .profile-image {
   position: relative;
-  z-index: 2; /* 保证图片在圆形上方 */
+  z-index: 2;
   border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%; /* 自定义圆角 */
-  width: 300px;
-  height: 300px;
+  width: 200px; /* 縮小圖片大小 */
+  height: 200px;
 }
 
 /* 重叠的圆形 */
@@ -41,62 +42,79 @@
 
 /* 第一层圆形 */
 .circle1 {
-  width: 300px;
-  height: 300px;
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70% ;
-  background-color: rgba(96, 120, 255, 0.5); /* 粉红色 */
-  z-index: 1; /* 保证圆形在图片下方 */
+  width: 200px;
+  height: 200px;
+  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
+  background-color: rgba(96, 120, 255, 0.5); 
+  z-index: 1; 
 }
 
 /* 第二层圆形 */
 .circle2 {
-  width: 300px;
-  height: 300px;
-  border-radius:30% 70% 70% 30% / 30% 49% 51% 70%  ;
-  background-color: rgba(126, 71, 255, 0.5); /* 浅蓝色 */
+  width: 180px;
+  height: 180px;
+  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
+  background-color: rgba(126, 71, 255, 0.5); 
   z-index: 0;
 }
 
 /* 文本内容 */
 .text-content {
-  text-align: center; /* 小屏幕时居中显示文本 */
-  margin-top: 0px; /* 控制文字與圖片的距離，調整此值讓文字更接近圖片 */
-  margin-bottom: 20px; /* 控制文字與下方內容的距離 */
-  width: 90%; /* 自适应宽度 */
+  text-align: center;
+  margin-top: 0px; 
+  margin-bottom: 20px;
+  width: 78%; /* 限制文字寬度為螢幕的 78% */
 }
 
 .text-content h1 {
-  font-size: 2rem;
+  font-size: 1.5rem; /* 縮小標題字體大小 */
   margin: 0;
-  text-align: left;
+  text-align: center;
   font-weight: 700;
 }
 
 .text-content p {
-  font-size: 1.2rem;
-  margin: 10px 0 0; /* 上方間距是10px，可調整為更小以貼近標題 */
+  font-size: 1rem; /* 縮小副標題字體大小 */
+  margin: 10px 0 0; 
   font-weight: 400;
-  text-align: left;
+  text-align: center;
 }
 
 /* 大屏幕特定样式 */
 @media (min-width: 768px) {
   .hero {
-    flex-direction: row; /* 大屏幕时恢复为行布局 */
-    justify-content: center; /* 调整为水平居中，使圖片與文字靠近 */
-    gap: 100px; /* 圖片與文字的水平間距 */
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
     padding: 0 50px;
   }
 
   .image-container {
-    margin-bottom: 0px; /* 大屏幕下讓圖片與文字的間距更小 */
+    width: 220px;
+    height: 220px;
+    margin-bottom: 0; /* 大屏幕下移除垂直距離 */
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle1 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle2 {
+    width: 250px;
+    height: 250px;
   }
 
   .text-content {
     text-align: left;
-    margin-left: 30px; /* 控制文字與圖片的水平距離 */
-    margin-top: 0; /* 去掉垂直間距 */
-    width: 500px; /* 限制文字寬度，避免太靠邊 */
+    margin-left: 30px;
+    margin-top: 0;
+    width: 500px;
   }
 
   .text-content h1 {
