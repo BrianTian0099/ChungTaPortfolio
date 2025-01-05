@@ -2,34 +2,54 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* 禁止全局滾動條，控制滑動行為 */
+  overflow-x: hidden; /* 禁止橫向滾動 */
   background-color: #000;
   color: #fff;
 }
 
-html {
-  scroll-behavior: smooth; /* 平滑滾動效果 */
-}
-
-/* 區塊樣式 */
 section {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
-  overflow: hidden; /* 防止內容溢出 */
+  padding: 20px;
 }
 
 /* 手機版樣式 */
 @media screen and (max-width: 768px) {
+  body {
+    overflow-y: auto; /* 手機版允許自然垂直滾動 */
+  }
+
   section {
-    height: 100vh;
+    scroll-snap-align: none; /* 移除區域對齊 */
+    height: auto; /* 根據內容自動調整高度 */
+    padding: 20px; /* 增加內邊距 */
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 10px;
   }
 
-  body {
-    overflow-y: hidden;
+  .image-container {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
   }
 }
