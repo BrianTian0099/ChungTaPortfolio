@@ -1,12 +1,35 @@
+/* 全局樣式 */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden;
-  background-color: black;
-  color: white;
+  overflow: hidden; /* 禁止全局滾動條，控制滑動行為 */
+  background-color: #000;
+  color: #fff;
 }
 
+html {
+  scroll-behavior: smooth; /* 平滑滾動效果 */
+}
+
+/* 區塊樣式 */
 section {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  overflow: hidden; /* 防止內容溢出 */
+}
+
+/* 手機版樣式 */
+@media screen and (max-width: 768px) {
+  section {
+    height: 100vh;
+    padding: 10px;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
 }
