@@ -13,6 +13,7 @@ const ProjectsSection = () => {
       technologies: "React, CSS, JavaScript",
       description: "這是作品一的描述，展示了使用 React 開發的交互式應用程式。",
       bgImage: project1,
+      link: "https://drive.google.com/file/d/1J8C99hBFbrhMOkqv9ARYlPz27mY6M1qt/view?usp=sharing",
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ const ProjectsSection = () => {
       technologies: "HTML, Sass, jQuery",
       description: "這是作品二的描述，展示了創建的靜態網頁和動態效果。",
       bgImage: project2,
+      link: "https://example.com/project2.pdf",
     },
     {
       id: 3,
@@ -27,6 +29,7 @@ const ProjectsSection = () => {
       technologies: "Vue.js, TailwindCSS",
       description: "這是作品三的描述，專注於構建響應式設計和元件化開發。",
       bgImage: project3,
+      link: "https://example.com/project3.pdf",
     },
     {
       id: 4,
@@ -34,21 +37,18 @@ const ProjectsSection = () => {
       technologies: "Node.js, Express, MongoDB",
       description: "這是作品四的描述，展示了使用全棧技術的 REST API 開發。",
       bgImage: project4,
+      link: "https://example.com/project4.pdf",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleLeftClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    }
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : projects.length - 1));
   };
 
   const handleRightClick = () => {
-    if (currentIndex < projects.length - 1) {
-      setCurrentIndex((prev) => prev + 1);
-    }
+    setCurrentIndex((prev) => (prev < projects.length - 1 ? prev + 1 : 0));
   };
 
   return (
@@ -74,9 +74,19 @@ const ProjectsSection = () => {
                 <img src={project.bgImage} alt={project.title} />
               </div>
               <div className="project-info">
-                <h2>{project.title}</h2>
-                <h3>使用技術：{project.technologies}</h3>
-                <p>{project.description}</p>
+                <div className="project-text">
+                  <h2>{project.title}</h2>
+                  <h3>使用技術：{project.technologies}</h3>
+                  <p>{project.description}</p>
+                </div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-button"
+                >
+                  查看PDF
+                </a>
               </div>
             </div>
           );
