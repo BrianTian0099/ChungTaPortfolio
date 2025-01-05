@@ -1,12 +1,18 @@
 import "./HeroSection.css";
+import profileImage from "../assets/head3.png"; // 引入带透明部分的图片
 
 const HeroSection = () => {
-  const profileImage = "https://raw.githubusercontent.com/BrianTian0099/ChungTaPortfolio/refs/heads/main/src/assets/head.png?token=GHSAT0AAAAAAC4TSNYUJQ5D3DRPA6R2CCFKZ3Y7TSQ";
-
   return (
     <section className="hero">
       <div className="image-container">
-        <img src={profileImage} alt="Profile" style={{ borderRadius: "50%", width: "200px", height: "200px" }} />
+        {/* 重叠的圆形 */}
+        <div className="circle circle1"></div>
+        <div className="circle circle2"></div>
+        <img 
+          src={profileImage} 
+          alt="Profile" 
+          className="profile-image"
+        />
       </div>
       <div className="text-content">
         <h1>Brian Tian</h1>
