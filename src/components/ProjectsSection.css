@@ -81,22 +81,7 @@
   color: #666;
 }
 
-.view-button {
-  width: auto;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.view-button:hover {
-  background-color: #0056b3;
-}
 
 /* 左右切换按钮样式 */
 .nav-button {
@@ -127,4 +112,92 @@
   border-radius: 25px;
   color: #ddd;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.view-button {
+  display: flex;
+  flex-direction: column; /* 垂直排列圖標和文字 */
+  align-items: center;
+  gap: 8px; /* 圖標和文字之間的間距 */
+  padding: 10px 100px;
+  background-color: #7bbafd;
+  /* border: 1.2px dashed rgb(255, 255, 255); */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  /* border: none; */
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #5f9ee0;
+}
+
+.view-button .icon {
+  width: 50px; /* 調整圖標大小 */
+  height: 50px;
+  fill: #333;
+  stroke: #333;
+}
+
+/* -----------------------手機板--------------------- */
+@media screen and (max-width: 768px) {
+.project-text{
+  width: 200px;
+}
+.project-info{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-text h2 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.project-text h3 {
+  font-size: 0.5rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+.project-text p {
+  font-size: 0.7rem;
+  color: #666;
+}
+.view-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px; /* 圖標和文字之間的間距 */
+  padding: 10px 70px;
+  height: 30px;
+  background-color: #7bbafd;
+  /* border: 1.2px dashed rgb(255, 255, 255); */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  /* border: none; */
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #5f9ee0;
+}
+
+.view-button .icon {
+  width: 25px; /* 調整圖標大小 */
+  height: 25px;
+  fill: #333;
+  stroke: #333;
+}
+
 }
