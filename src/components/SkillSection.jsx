@@ -11,7 +11,7 @@ const SkillSection = () => {
     { name: "Illustrator", level: "Advanced" },
     { name: "Photoshop", level: "Intermediate" },
     { name: "3D Solidworks", level: "Advanced" },
-    { name: "3D render Keyshot", level: "Beginner" },
+    { name: "3D render Keyshot", level: "Advanced" },
     { name: "blender", level: "Beginner" },
     
   ];
