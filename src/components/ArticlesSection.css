@@ -1,73 +1,73 @@
 /* 整體區塊樣式 */
 .articles-section {
   position: relative;
-  height: 100vh;
-  padding: 20px;
+  padding: 40px 10%; /* 與視窗左邊距離10% */
   background-color: #000000;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* 區域內容靠左 */
   justify-content: flex-start;
 }
 
 /* 標題樣式 */
-.section-title {
+.articles-title {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
-  position: absolute;
-  top: 10%; /* 顯示在上方 10% */
-  text-align: center;
+  position: absolute; /* 使用絕對定位讓標題在視窗上方置中 */
+  top: 5%; /* 離視窗上方的距離 */
+  left: 50%; /* 向左移動到視窗中央 */
+  transform: translateX(-50%); /* 水平居中 */
+  text-align: center; /* 標題置中 */
+  width: 100%;
 }
 
-/* 文章容器樣式 */
-.article-container {
-  margin-top: 20%;
+/* 文章容器 */
+.articles-container {
+  margin-top: 10%; /* 為了避開上方標題 */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  max-width: 800px;
-  gap: 20px;
+  flex-wrap: wrap; /* 支援多行排列 */
+  justify-content: flex-start; /* 向左對齊 */
+  gap: 20px; /* 卡片之間的間距 */
+  width: 100%;
 }
 
 /* 單篇文章卡片 */
 .article-card {
-  width: 100%;
-  /* background-color: #ffffff; */
-  border: solid white 5px;
-  border-radius: 2px;
+  width: 30%; /* 卡片寬度為視窗的25% */
+  border: 2px solid white;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 15px;
+  align-items: flex-start; /* 卡片內容向左對齊 */
+  background-color: #000000;
+  color: #000000;
+  padding-bottom: 10px;
 }
 
-/* 圖片樣式 */
+/* 圖片區 */
 .article-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border: 1px solid #000;
+  height: 250px; /* 固定圖片高度 */
+  background-color: #f0f0f0; /* 預留圖片空間，可替換成圖片 */
+  border-bottom: 2px solid white;
 }
 
 /* 文章資訊區 */
 .article-info {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
+  width: 90%;
+  margin-left: 5px;
   padding: 10px;
-  text-align: left;
+  text-align: left; /* 向左對齊 */
 }
 
 .article-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #f0f0f0;
 }
 
 .article-title {
@@ -77,30 +77,108 @@
 
 .article-date {
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: #ffffff;
 }
 
 .article-description {
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #ffffff;
 }
 
 /* 閱讀按鈕 */
 .read-button {
   margin-top: 10px;
-  padding: 10px 60px;
+  width: 75%;
+  padding: 15px 40px 20px 40px;
   background-color: #32cd32;
   color: #000000;
   font-size: 1rem;
   font-weight: bold;
-  margin-left: 80%;
-  /* text-align: center; */
-  text-decoration: none;
-  /* border-radius: 8px; */
+  text-align: center;
+  text-decoration: center;
+  /* border-radius: 5px; */
   cursor: pointer;
+  /* align-self: flex-start; 按鈕與左對齊 */
 }
 
 .read-button:hover {
   background-color: #228b22;
+}
+
+/* 手機版樣式 */
+@media screen and (max-width: 768px) {
+  .article-image {
+    width: 100%;
+    height: 300px; /* 固定圖片高度 */
+    background-color: #f0f0f0; /* 預留圖片空間，可替換成圖片 */
+    border-bottom: 2px solid white;
+  }
+
+
+  .articles-title {
+    font-size: 1.5rem; /* 縮小標題字體 */
+    top: 2%; /* 手機版時標題距視窗上方更小 */
+  }
+
+  .articles-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    position: absolute; /* 使用絕對定位讓標題在視窗上方置中 */
+    top: 5%; /* 離視窗上方的距離 */
+    left: 50%; /* 向左移動到視窗中央 */
+    transform: translateX(-50%); /* 水平居中 */
+    text-align: center; /* 標題置中 */
+    width: 100%;
+  }
+
+  .articles-container {
+    margin-top: 15%; /* 為了避開上方標題 */
+    display: flex;
+    flex-wrap: wrap; /* 支援多行排列 */
+    justify-content: center; /* 向左對齊 */
+    gap: 20px; /* 卡片之間的間距 */
+    width: 100%;
+  }
+  .articles-container {
+    margin-top: 15%; /* 為了避開上方標題 */
+    display: flex;
+    flex-wrap: wrap; /* 支援多行排列 */
+    justify-content: center; /* 向左對齊 */
+    gap: 20px; /* 卡片之間的間距 */
+    width: 100%;
+  }
+
+
+  .article-card {
+    width: 90%; /* 手機版卡片寬度為90% */
+  }
+
+  .article-image {
+    height: 120px; /* 縮小圖片高度 */
+  }
+
+  .read-button {
+    width: 86%;
+    padding: 10px 20px; /* 縮小按鈕尺寸 */
+    font-size: 0.9rem; /* 縮小按鈕字體大小 */
+  }
+
+  .article-title {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .article-date {
+    font-size: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .article-description {
+    font-size: 0.5rem;
+    margin-top: 5px;
+    color: #ffffff;
+  }
+
 }

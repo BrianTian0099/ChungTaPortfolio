@@ -1,6 +1,6 @@
 .skill-section {
     padding: 50px 50px;
-    background-color: #000000;
+    /* background-color: #000000; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
   }
   
   .skill-card {
-    background-color: rgb(51, 48, 48);
+    background-color: rgb(175, 37, 255);
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);

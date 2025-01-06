@@ -2,13 +2,26 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-<<<<<<< HEAD
-=======
-  overflow-x: hidden; /* 禁止橫向滾動 */
->>>>>>> 7d7228af592f592e146ec66d0c36bda3d7eeafae
   background-color: #000;
   color: #fff;
   overflow-x: hidden; /* 防止橫向滾動 */
+/* ----------------------------------------------------- */
+
+  background: linear-gradient(135deg, #2b74bd, #08141f, #08213a);
+  background-size: 200% 200%; /* 擴大背景以實現動畫 */
+  animation: gradient-animation 3s infinite alternate; /* 添加動畫 */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  /* -------------------------------------------- */
 }
 
 section {
@@ -17,10 +30,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-=======
-  padding: 20px;
->>>>>>> 7d7228af592f592e146ec66d0c36bda3d7eeafae
 }
 
 /* 手機版樣式 */
@@ -30,38 +39,6 @@ section {
   }
 
   section {
-<<<<<<< HEAD
     padding: 10px;
   }
-=======
-    scroll-snap-align: none; /* 移除區域對齊 */
-    height: auto; /* 根據內容自動調整高度 */
-    padding: 20px; /* 增加內邊距 */
-  }
-
-  .hero {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 10px;
-  }
-
-  .image-container {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
-
-  .text-content {
-    width: 100%;
-    text-align: center;
-  }
-
-  .text-content h1 {
-    font-size: 1.2rem;
-  }
-
-  .text-content p {
-    font-size: 1rem;
-  }
->>>>>>> 7d7228af592f592e146ec66d0c36bda3d7eeafae
 }
