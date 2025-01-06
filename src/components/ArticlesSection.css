@@ -51,7 +51,9 @@
 .article-image {
   width: 100%;
   height: 250px; /* 固定圖片高度 */
-  background-color: #f0f0f0; /* 預留圖片空間，可替換成圖片 */
+  background-size: cover; /* 圖片填充 */
+  background-position: center; /* 圖片居中 */
+  background-repeat: no-repeat; /* 防止重複 */
   border-bottom: 2px solid white;
 }
 
@@ -89,7 +91,7 @@
 /* 閱讀按鈕 */
 .read-button {
   margin-top: 10px;
-  width: 75%;
+  width: 79%;
   padding: 15px 40px 20px 40px;
   background-color: #32cd32;
   color: #000000;
