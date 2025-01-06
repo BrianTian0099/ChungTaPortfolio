@@ -36,7 +36,9 @@
 /* 社交連結樣式 */
 .social-links {
   display: flex;
+  flex-direction: row; /* 默認橫向排列 */
   gap: 20px;
+  justify-content: center; /* 居中排列 */
 }
 
 .social-link {
@@ -64,8 +66,8 @@
 /* 手機版樣式 */
 @media screen and (max-width: 768px) {
   .social-links {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row; /* 確保手機版也保持橫向排列 */
+    gap: 15px; /* 減小間距 */
   }
 
   .social-link {
