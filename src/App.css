@@ -2,9 +2,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* 禁止全局滾動條，控制滑動行為 */
   background-color: #000;
   color: #fff;
+  overflow-x: hidden; /* 防止橫向滾動 */
 }
 
 html {
@@ -14,22 +14,15 @@ html {
 /* 區塊樣式 */
 section {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* 確保每個區塊至少有一個視窗高度 */
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
-  overflow: hidden; /* 防止內容溢出 */
 }
 
 /* 手機版樣式 */
 @media screen and (max-width: 768px) {
   section {
-    height: 100vh;
     padding: 10px;
-  }
-
-  body {
-    overflow-y: hidden;
   }
 }
