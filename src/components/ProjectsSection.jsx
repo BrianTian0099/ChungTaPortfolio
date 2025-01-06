@@ -38,7 +38,7 @@ const ProjectsSection = () => {
       technologies: "Node.js, Express, MongoDB",
       description: "此作品聚焦進程管理服務介面設計，提供清晰的數據可視化與高效的操作流程。界面簡潔直觀，支持多任務切換與實時進度跟蹤，助力用戶提升管理效率與決策能力。",
       bgImage: project4,
-      link: "https://example.com/project4.pdf",
+      link: "https://drive.google.com/file/d/1SDX3x053UTp1vbVHE8gthGG03rdjnq8p/view?usp=sharing",
     },
   ];
 
