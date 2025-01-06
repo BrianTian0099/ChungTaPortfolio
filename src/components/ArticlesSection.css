@@ -119,7 +119,7 @@
 
 
   .articles-title {
-    font-size: 1.5rem; /* 縮小標題字體 */
+    font-size: 1.0rem; /* 縮小標題字體 */
     top: 2%; /* 手機版時標題距視窗上方更小 */
   }
 
