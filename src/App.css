@@ -1,15 +1,15 @@
-/* 全局樣式 */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #000;
   color: #fff;
-  overflow-x: hidden; /* 防止橫向滾動 */
+  overflow-x: hidden; 
 /* ----------------------------------------------------- */
 
   background: linear-gradient(135deg, #2b74bd, #08141f, #08213a);
   background-size: 200% 200%; /* 擴大背景以實現動畫 */
-  animation: gradient-animation 3s infinite alternate; /* 添加動畫 */
+  animation: gradient-animation 3s infinite alternate; 
   @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;
@@ -26,7 +26,7 @@ body {
 
 section {
   width: 100vw;
-  min-height: 100vh; /* 確保每個區塊至少有一個視窗高度 */
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
