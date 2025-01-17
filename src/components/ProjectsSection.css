@@ -116,9 +116,9 @@
 
 .view-button {
   display: flex;
-  flex-direction: column; /* 垂直排列圖標和文字 */
+  flex-direction: column; 
   align-items: center;
-  gap: 8px; /* 圖標和文字之間的間距 */
+  gap: 8px; 
   padding: 10px 100px;
   background-color: #7bbafd;
   /* border: 1.2px dashed rgb(255, 255, 255); */
@@ -138,7 +138,7 @@
 }
 
 .view-button .icon {
-  width: 50px; /* 調整圖標大小 */
+  width: 50px; 
   height: 50px;
   fill: #333;
   stroke: #333;
@@ -173,7 +173,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px; /* 圖標和文字之間的間距 */
+  gap: 8px; 
   padding: 10px 70px;
   height: 30px;
   background-color: #7bbafd;
@@ -194,7 +194,7 @@
 }
 
 .view-button .icon {
-  width: 25px; /* 調整圖標大小 */
+  width: 25px; 
   height: 25px;
   fill: #333;
   stroke: #333;

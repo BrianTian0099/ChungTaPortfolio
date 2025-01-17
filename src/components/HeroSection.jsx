@@ -1,5 +1,5 @@
 import "./HeroSection.css";
-import profileImage from "../assets/head3.png"; // 引入带透明部分的图片
+import profileImage from "../assets/head3.png"; 
 
 const HeroSection = () => {
   return (

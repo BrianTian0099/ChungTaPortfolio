@@ -1,21 +1,19 @@
 /* HeroSection.css */
 
-/* 主容器样式 */
+/* 5k主要 */
 .hero {
   display: flex;
-  flex-direction: column; /* 小屏幕垂直布局 */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 20px; /* 縮小內邊距以適配小屏幕 */
+  padding: 0 20px; 
   font-family: Arial, sans-serif;
   position: relative;
   color: rgb(240, 240, 240);
-
-  /* 背景樣式 */
   background: linear-gradient(135deg, #001f3f, #043768, #0161c2);
   background-size: 200% 200%; /* 擴大背景以實現動畫 */
-  animation: gradient-animation 3s infinite alternate; /* 添加動畫 */
+  animation: gradient-animation 3s infinite alternate; 
 }
 
 /* 定義漸變動畫 */
@@ -31,7 +29,7 @@
   }
 }
 
-/* 圖片容器 */
+
 .image-container {
   position: relative;
   width: 200px;
@@ -46,12 +44,12 @@
 .profile-image {
   position: relative;
   z-index: 2;
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%; /* 自定义圆角 */
+  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
   width: 200px;
   height: 200px;
 }
 
-/* 重疊的圓形 */
+
 .circle {
   position: absolute;
   border-radius: 50%;
