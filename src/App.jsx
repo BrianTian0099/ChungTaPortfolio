@@ -3,6 +3,7 @@ import SkillSection from "./components/SkillSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ArticlesSection from "./components/ArticlesSection";
 import ContactSection from "./components/ContactSection";
+import FeatureSection from "./components/FeatureSection";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div>
       <HeroSection />
       <SkillSection />
+      <FeatureSection></FeatureSection>
       <ProjectsSection />
       <ArticlesSection />
       <ContactSection />

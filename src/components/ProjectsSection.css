@@ -144,6 +144,51 @@
   stroke: #333;
 }
 
+
+/* 頁籤容器 */
+.tabs {
+  position: absolute;
+  top: 20px; /* 距離頂部的間距 */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%);
+  background-color: #000000;
+  border: #7bbafd solid 5px;
+  border-radius: 50px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  z-index: 10; /* 確保頁籤位於最上層 */
+}
+
+/* 單個頁籤按鈕 */
+.tab {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #555;
+  border: #fff solid 2px ;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+
+
+
+
+
+
 /* -----------------------手機板--------------------- */
 @media screen and (max-width: 768px) {
 .project-text{
@@ -200,4 +245,18 @@
   stroke: #333;
 }
 
+.tab{
+  font-size: 0.5rem;
+  /* height: 10%; */
+  background-color: #000000 ;
 }
+
+
+
+
+}
+
+
+
+
+
