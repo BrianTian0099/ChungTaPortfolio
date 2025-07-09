@@ -1,117 +1,103 @@
-/* HeroSection.css */
-
-/* 5k主要 */
 .hero {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 20px; 
-  font-family: Arial, sans-serif;
+  padding: 0 20px;
+  font-family: "Noto Sans", sans-serif;
   position: relative;
-  color: rgb(240, 240, 240);
-  background: linear-gradient(135deg, #001f3f, #043768, #0161c2);
-  background-size: 200% 200%; /* 擴大背景以實現動畫 */
-  animation: gradient-animation 3s infinite alternate; 
+  color: #f0f0f0;
+  background-color: #000;
+  background-size: 200% 200%;
+  animation: gradient-animation 5s infinite alternate;
 }
 
-/* 定義漸變動畫 */
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
-
-.image-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5%;
-}
-
-/* 透明圖片 */
-.profile-image {
-  position: relative;
-  z-index: 2;
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
-  width: 200px;
-  height: 200px;
-}
-
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle1 {
-  width: 200px;
-  height: 200px;
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
-  background-color: rgba(96, 120, 255, 0.5);
-  z-index: 1;
-}
-
-.circle2 {
-  width: 180px;
-  height: 180px;
-  border-radius: 30% 70% 70% 30% / 30% 49% 51% 70%;
-  background-color: rgba(126, 71, 255, 0.5);
-  z-index: 0;
-}
-
-/* 文本內容 */
 .text-content {
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  width: 78%;
+  max-width: 720px;
 }
 
 .text-content h1 {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   margin: 0;
-  text-align: center;
   font-weight: 700;
+  line-height: 1.4;
 }
 
-.text-content p {
-  font-size: 2.rem;
-  margin: 10px 0 0;
-  font-weight: 400;
-  text-align: center;
+.subTitle {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #aaaaaa;
+  letter-spacing: 0.8px;
 }
+
+.quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5rem;
+}
+
+.shortIntro {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.headImgGroup {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.headImg {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headImg:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* 微互動感：飄浮、延遲、旋轉 */
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+.floating.delay {
+  animation-delay: 1s;
+}
+.rotated {
+  transform: rotate(-5deg);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
 @media screen and (max-width: 768px) {
-
-  .text-content {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    width: 78%;
-  }
-  
   .text-content h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    text-align: center;
-    font-weight: 700;
+    font-size: 1.8rem;
   }
-  
-  .text-content p {
-    font-size: 1rem;
-    margin: 10px 0 0;
-    font-weight: 400;
-    text-align: center;
+  .quote, .shortIntro {
+    font-size: 0.95rem;
+  }
+  .headImgGroup {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }

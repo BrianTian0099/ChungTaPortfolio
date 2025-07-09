@@ -4,11 +4,13 @@ import ProjectsSection from "./components/ProjectsSection";
 import ArticlesSection from "./components/ArticlesSection";
 import ContactSection from "./components/ContactSection";
 import FeatureSection from "./components/FeatureSection";
+import NavBar from "./components/NavBar";
 import "./App.css";
 
 function App() {
   return (
     <div>
+      <NavBar />
       <HeroSection />
       <SkillSection />
       <FeatureSection></FeatureSection>
