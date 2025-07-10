@@ -6,12 +6,22 @@ import project3 from "../assets/project3.jpg";
 import project4 from "../assets/project4.jpg";
 import pdfIcon from "../assets/ICON/pdficon.svg";
 import Project5 from "../assets/Project5.jpg";
+import CompanyProject1 from "../assets/CompanyProject1.gif";
 
 const ProjectsSection = () => {
   // 定義 UI/UX 和 工業設計作品數據
   const uiuxProjects = [
     {
       id: 1,
+      title: "票務系統後台-公告中心設計開發-已上線（檔案尚在整理中，敬請期待）",
+      technologies: "FIGMA, Wireframe, Usability test,  HTML , CSS",
+      description:
+        "💡 主要設計重點：使用流程資訊規劃，提升訊息辨識效率 ,結合權限層級與提醒層次邏輯設計 ,負責 UX 架構、UI 設計與切版協作（Figma + Git）",
+      bgImage: CompanyProject1,
+      link: "https://drive.google.com/file/d/1PuvdqPRRoELQzYRdMvNcgcYw4QUdE24v/view?usp=sharing",
+    },
+    {
+      id: 2,
       title: "穿戴式智慧手錶介面設計",
       technologies: "FIGMA, Wireframe, 3D Solidworks , 3D render Keyshot",
       description:
@@ -20,7 +30,7 @@ const ProjectsSection = () => {
       link: "https://drive.google.com/file/d/1J8C99hBFbrhMOkqv9ARYlPz27mY6M1qt/view?usp=sharing",
     },
     {
-      id: 2,
+      id: 3,
       title: "AI助手智慧剪輯平台",
       technologies: "FIGMA, Wireframe , Maze , 問卷設計 ",
       description:
@@ -29,7 +39,7 @@ const ProjectsSection = () => {
       link: "https://drive.google.com/file/d/1pc2cFW9oXVTGw2MvBezGo3PcqOxGxtA8/view?usp=sharing",
     },
     {
-      id: 3,
+      id: 4,
       title: "HMI中控介面設計",
       technologies: "FIGMA, Wireframe , Maze , 問卷設計",
       description:
@@ -38,7 +48,7 @@ const ProjectsSection = () => {
       link: "https://drive.google.com/file/d/1xz_r2CrTmb9e5rsq0ARHxsBuolHkYqZi/view?usp=sharing",
     },
     {
-      id: 4,
+      id: 5,
       title: "進程管理介面設計",
       technologies: "FIGMA, Wireframe ",
       description:
