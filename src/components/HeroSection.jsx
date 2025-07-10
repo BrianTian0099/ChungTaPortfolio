@@ -4,6 +4,12 @@ import profileImage from "../assets/chatgpt_image_20250709.png";
 const HeroSection = () => {
   return (
     <section className="hero">
+      <div className="backgroundText">
+        <span>a learner</span>
+        <span>a Designer</span>
+        <span>a Developer</span>
+        <span>a Creator</span>
+      </div>
       <div className="text-content">
         <h1>
           2025 作品集 7月優化中

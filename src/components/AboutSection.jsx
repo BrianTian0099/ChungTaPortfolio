@@ -1,10 +1,34 @@
-import "./AboutSection.css";
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import aboutImg from "../assets/Frame 55.png";
+import "./AboutSection.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      aboutRef.current,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 80%",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="about-section">
-      <div className="about-section-wrapper">
+    <section className="about-section" ref={aboutRef}>
+      {<div className="about-section-wrapper">
         <h2>關於我</h2>
         <div className="aboutWrapperGroup">
           <img src={aboutImg} alt="" />
@@ -19,7 +43,7 @@ const AboutSection = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div>}
     </section>
   );
 };

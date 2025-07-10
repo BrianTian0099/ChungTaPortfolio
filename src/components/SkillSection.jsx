@@ -2,30 +2,23 @@ import "./SkillSection.css";
 
 const SkillSection = () => {
   const skills = [
-    { name: "Figma", level: "Advanced" },
-    { name: "Maze", level: "Intermediate" },
-    { name: "HTML", level: "Advanced" },
-    { name: "CSS", level: "Intermediate" },
-    { name: "JavaScript", level: "Intermediate" },
-    { name: "Git", level: "Intermediate" },
-    { name: "Illustrator", level: "Advanced" },
-    { name: "Photoshop", level: "Intermediate" },
-    { name: "3D Solidworks", level: "Advanced" },
-    { name: "3D render Keyshot", level: "Advanced" },
-    { name: "blender", level: "Beginner" },
-    
+    "Figma", "Maze", "HTML", "CSS", "JavaScript",
+    "Git", "Illustrator", "Photoshop",
+    "3D Solidworks", "Keyshot", "Blender",
   ];
 
+  // 重複一組，讓輪播平滑不會斷
+  const repeatedSkills = [...skills, ...skills];
+
   return (
-    <section className="skill-section">
+    <section className="skill-section marquee-wrapper">
       <h2 className="section-title">技能</h2>
-      <div className="skills-container">
-        {skills.map((skill, index) => (
-          <div key={index} className="skill-card">
-            <h3>{skill.name}</h3>
-            <p>{skill.level}</p>
-          </div>
-        ))}
+      <div className="marquee">
+        <div className="marquee-content">
+          {repeatedSkills.map((skill, index) => (
+            <div key={index} className="skill-pill">{skill}</div>
+          ))}
+        </div>
       </div>
     </section>
   );

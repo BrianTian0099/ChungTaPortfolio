@@ -12,6 +12,19 @@
   background-size: 200% 200%;
   animation: gradient-animation 5s infinite alternate;
 }
+.backgroundText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+  font-size: 7rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }
@@ -99,5 +112,19 @@
   .headImgGroup {
     flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  .backgroundText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
 }
