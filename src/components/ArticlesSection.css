@@ -2,7 +2,7 @@
 .articles-section {
   position: relative;
   padding: 40px 10%; /* 與視窗左邊距離10% */
-  background-color: #000000;
+  /* background-color: #000000; */
   color: #ffffff;
   display: flex;
   flex-direction: column;

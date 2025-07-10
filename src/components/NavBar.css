@@ -1,50 +1,82 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 2rem;
-    background-color: rgba(0, 0, 0, 0.419);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .navBarInline{
-    outline: white 1px solid;
-    outline-offset: 15px;
-    border-radius: 50px;
-  }
-  
-  .logo a {
-    color: #fff;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.8rem;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: rgba(0, 0, 0, 0.019);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-    outline: white 1px solid;
-    outline-offset: 15px;
-    border-radius: 50px;
+.logo a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 50px;
+  outline: white 1px solid;
+  outline-offset: 15px;
+  transition: all 0.3s ease
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* ✅ 漢堡按鈕 */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ✅ 手機版 */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-  
-  .nav-links a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s ease;
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1rem;
+    display: none;
+    z-index: 999;
+    outline: none;
+    border-radius: 1rem;
+    min-width: 180px;
   }
-  
-  .nav-links a:hover {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+
+  .nav-links.open {
+    display: flex;
   }
-  
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}

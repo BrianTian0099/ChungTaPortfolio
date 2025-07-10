@@ -1,20 +1,26 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
-
       <div className="logo">
-        <Link to="/">Brian Tian</Link>
+        <NavLink to="/">Brian Tian</NavLink>
       </div>
-      <ul className="nav-links">
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/works">Works</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
 
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
+        <li><NavLink to="/works" onClick={() => setMenuOpen(false)}>Works</NavLink></li>
+        <li><NavLink to="/articles" onClick={() => setMenuOpen(false)}>Articles</NavLink></li>
+        <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>
+      </ul>
     </nav>
   );
 };
