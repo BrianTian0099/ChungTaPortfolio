@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   const uiuxProjects = [
     {
       id: 1,
-      title: "票務系統後台-公告中心設計開發-已上線（檔案尚在整理中，敬請期待）",
+      title: "票務系統後台公告中心設計開發 - 已上線 （現職相關專案，設計檔案整理中，敬請期待，詳情可參考履歷）",
       technologies: "FIGMA, Wireframe, Usability test,  HTML , CSS",
       description:
         "💡 主要設計重點：使用流程資訊規劃，提升訊息辨識效率 ,結合權限層級與提醒層次邏輯設計 ,負責 UX 架構、UI 設計與切版協作（Figma + Git）",

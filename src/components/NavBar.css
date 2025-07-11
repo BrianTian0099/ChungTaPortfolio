@@ -33,6 +33,11 @@
   cursor: pointer;
   /* 其他樣式保留 */
 }
+.nav-links a.active {
+  background-color: aliceblue;
+  font-weight: bold;
+  border-radius: 50px;
+}
 
 .nav-links li a {
   color: #ccc;

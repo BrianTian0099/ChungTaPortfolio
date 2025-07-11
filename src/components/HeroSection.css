@@ -113,6 +113,9 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+  .aboutWrapperGroup img{
+    width: 30% !important;
+  }
 
   .backgroundText {
     position: absolute;
