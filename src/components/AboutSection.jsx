@@ -27,7 +27,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="about-section" ref={aboutRef}>
+    <section id="about" className="about-section" ref={aboutRef}>
       {<div className="about-section-wrapper">
         <h2>關於我</h2>
         <div className="aboutWrapperGroup">

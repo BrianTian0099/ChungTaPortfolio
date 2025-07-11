@@ -15,7 +15,7 @@ const ArticlesSection = () => {
   ];
 
   return (
-    <section className="articles-section">
+    <section id="articles" className="articles-section">
       <h2 className="articles-title">我的文章</h2>
       <div className="articles-container">
         {articles.map((article, index) => (

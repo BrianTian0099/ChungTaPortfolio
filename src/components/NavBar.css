@@ -29,6 +29,10 @@
   outline-offset: 15px;
   transition: all 0.3s ease
 }
+.nav-links a {
+  cursor: pointer;
+  /* 其他樣式保留 */
+}
 
 .nav-links li a {
   color: #ccc;

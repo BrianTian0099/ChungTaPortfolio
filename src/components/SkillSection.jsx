@@ -11,7 +11,7 @@ const SkillSection = () => {
   const repeatedSkills = [...skills, ...skills];
 
   return (
-    <section className="skill-section marquee-wrapper">
+    <section id="skills" className="skill-section marquee-wrapper">
       <h2 className="section-title">技能</h2>
       <div className="marquee">
         <div className="marquee-content">

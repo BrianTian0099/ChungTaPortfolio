@@ -3,7 +3,7 @@ import profileImage from "../assets/chatgpt_image_20250709.png";
 
 const HeroSection = () => {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="backgroundText">
         <span>a learner</span>
         <span>a Designer</span>

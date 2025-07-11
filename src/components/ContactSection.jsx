@@ -5,7 +5,7 @@ import linkedinIcon from "../assets/ICON/linkedin-brands-solid.svg";
 
 const ContactSection = () => {
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <h2 className="contact-title">聯絡我</h2>
       <p className="contact-email">
         <a href="brianduke0097@gmail.com">brianduke0097@gmail.com</a>

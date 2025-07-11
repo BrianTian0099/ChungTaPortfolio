@@ -1,14 +1,26 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import "./NavBar.css";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: `#${id}`,
+      ease: "power2.inOut",
+    });
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">
-        <NavLink to="/">Brian Tian</NavLink>
+      <div className="logo" onClick={() => scrollToSection("hero")}>
+        Brian Tian
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -16,10 +28,11 @@ const NavBar = () => {
       </div>
 
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <li><NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink></li>
-        <li><NavLink to="/works" onClick={() => setMenuOpen(false)}>Works</NavLink></li>
-        <li><NavLink to="/articles" onClick={() => setMenuOpen(false)}>Articles</NavLink></li>
-        <li><NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink></li>
+        <li><a onClick={() => scrollToSection("about")}>About</a></li>
+        <li><a onClick={() => scrollToSection("skills")}>Skills</a></li>
+        <li><a onClick={() => scrollToSection("projects")}>Works</a></li>
+        <li><a onClick={() => scrollToSection("articles")}>Articles</a></li>
+        <li><a onClick={() => scrollToSection("contact")}>Contact</a></li>
       </ul>
     </nav>
   );

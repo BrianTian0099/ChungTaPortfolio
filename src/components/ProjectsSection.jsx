@@ -92,7 +92,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="tabs">
         <button
           className={`tab ${activeTab === "uiux" ? "active" : ""}`}
