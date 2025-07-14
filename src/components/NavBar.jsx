@@ -29,7 +29,7 @@ const NavBar = () => {
 
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <a onClick={() => scrollToSection("about")}>About</a>
+          <a onClick={() => scrollToSection("about")}>Home</a>
         </li>
         <li>
           <a onClick={() => scrollToSection("skills")}>Skills</a>
