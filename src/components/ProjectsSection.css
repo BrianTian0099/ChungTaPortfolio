@@ -207,7 +207,8 @@
 }
 
 .tab:hover {
-  background-color: #555;
+  background-color: #0463c9;
+  color: white;
   /* border: #fff solid 2px ; */
 }
 
