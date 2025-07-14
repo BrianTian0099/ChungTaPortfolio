@@ -1,0 +1,54 @@
+.mainWrapper{
+    height: 70vh;
+}
+  @keyframes shine {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .mainTittle {
+    background: linear-gradient(270deg, #11f1ea, #7873f5, #1fd1f9);
+    background-size: 600% 600%;
+    animation: shine 6s ease-in-out infinite;
+    font-size: 6rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+  .mainTalk{
+    letter-spacing: 1rem;
+  }
+  
+
+
+  /* .animateFadeIn {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  .animateSlideUp {
+    animation: slideUp 1.2s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   */

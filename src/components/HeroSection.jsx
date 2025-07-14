@@ -6,13 +6,12 @@ const HeroSection = () => {
     <section id="hero" className="hero">
       <div className="heroGridWrapper">
         <div className="heroGridLeft">
-          {/* <div className="heroGridLeftImg"><img src={profileImage} alt="" /></div> */}
           <div className="heroGridDraw"></div>
           <div className="heroGridLeftText">
             <span>a learner</span>
-            <span>a Designer</span>
-            <span>a Developer</span>
-            <span>a Creator</span>
+            <span>a designer</span>
+            <span>a developer</span>
+            <span>a creator</span>
           </div>
         </div>
         <div className="heroGridRight_Top">
