@@ -94,6 +94,9 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="projects-section">
       <div className="tabs">
+      <button className="nav-button buttonLeft" onClick={handleLeftClick}>
+        ←
+      </button>
         <button
           className={`tab ${activeTab === "uiux" ? "active" : ""}`}
           onClick={() => {
@@ -113,10 +116,13 @@ const ProjectsSection = () => {
         >
           Industrial design
         </button>
-      </div>
-      <button className="nav-button left" onClick={handleLeftClick}>
-        ←
+        <button className="nav-button buttonRight" onClick={handleRightClick}>
+        →
       </button>
+      </div>
+      {/* <button className="nav-button buttonLeft" onClick={handleLeftClick}>
+        ←
+      </button> */}
       <div className="carousel">
         {projects.map((project, index) => {
           const position = index - currentIndex;
@@ -154,9 +160,9 @@ const ProjectsSection = () => {
           );
         })}
       </div>
-      <button className="nav-button right" onClick={handleRightClick}>
+      {/* <button className="nav-button buttonRight" onClick={handleRightClick}>
         →
-      </button>
+      </button> */}
     </section>
   );
 };
