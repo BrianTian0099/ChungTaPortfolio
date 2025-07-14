@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
+  /* margin-top: 1.5rem; */
   padding: 0 20px;
   font-family: "Noto Sans", sans-serif;
   position: relative;
@@ -27,8 +28,12 @@
 }
 
 @keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .text-content {
@@ -97,23 +102,30 @@
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .text-content h1 {
     font-size: 1.8rem;
   }
-  .quote, .shortIntro {
+  .quote,
+  .shortIntro {
     font-size: 0.95rem;
   }
   .headImgGroup {
     flex-wrap: wrap;
     gap: 1rem;
   }
-  .aboutWrapperGroup img{
+  .aboutWrapperGroup img {
     width: 30% !important;
   }
 
@@ -130,4 +142,215 @@
     flex-direction: column;
     text-align: left;
   }
+}
+
+/* ------------------------重新排版--------------------------------- */
+.heroGridWrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 80%;
+  width: 100%;
+  background: linear-gradient(to right , rgba(181, 181, 188, 0.175) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.197));
+  /* border: 0.25px solid rgb(192, 141, 240); */
+  /* background-color: rgba(185, 171, 171, 0.219); */
+  border-radius: 15px;
+  padding: 0.25rem;
+  box-shadow: 0.25px -0.2px 6px rgba(255, 255, 255, 0.573), -0.1px 0.2px 3px rgba(255, 255, 255, 0.547);
+}
+.heroGridLeft {
+  position: relative;
+  grid-row: 1 / 11;
+  grid-column: 1 / 7;
+  /* background-color: blueviolet; */
+  background: linear-gradient(
+    to right,
+    rgba(90, 90, 255, 0.246),
+    rgba(0, 0, 255, 0.334),
+    rgba(90, 90, 255, 0.303)
+  );
+  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 5px;
+  border: 0.15px rgb(103, 104, 106) solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 0.2rem;
+}
+
+.heroName{
+  font-size: 1rem;
+  /* margin-top: 0.2rem; */
+  font-weight: 300;
+}
+
+.heroGridDraw {
+  position: relative;
+  top: 19rem;
+  width: 50rem;
+  height: 50rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 170, 255, 0.2),
+    rgba(0, 170, 255, 0.5),
+    rgba(0, 120, 200, 0.8)
+  );  border-radius: 50%;
+}
+.heroGridLeftImg img {
+  /* position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%; */
+  border-radius: 50%;
+  /* background-color: #f0f0f0; */
+  width: 7rem;
+  height: 7rem;
+}
+
+.heroGridLeftText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.08;
+  pointer-events: none;
+  font-size: 8rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.heroGridRight_Top {
+  grid-row: 1 / 4;
+  grid-column: 7 / 11;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border: 0.25px solid rgb(152, 198, 254);
+  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+  background-color: #00000d70;
+}
+.heroAccomplishment {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: 1.6rem;
+  margin-top: 0.5rem;
+}
+.AccomplishmentGroup {
+  border-radius: 50px;
+  border: 1px solid wheat;
+  padding: 0.6rem 0.8rem;
+}
+
+.heroGridTittle {
+  text-align: left;
+  margin-left: 1.6rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.heroGridArticle {
+  grid-row: 4 /11;
+  grid-column: 7 / 11;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: left;
+  border: 0.2px solid rgb(106, 173, 255);
+  /* background-color: rgba(66, 66, 117, 0.183); */
+  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+
+}
+.heroGridArticle span {
+  text-align: left;
+  height: 100%;
+}
+.heroGridBackText{
+  display: none;
+}
+.RWDBackground{
+  display: none;
+}
+ .heroNotice{
+  /* position: absolute;
+  bottom: 6rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* margin-top: 2rem; */
+  border-radius: 50px;
+  background: linear-gradient(to right, rgba(255, 0, 119, 0.659), rgba(255, 0, 0, 0.6) ,rgb(213, 17, 112));
+  /* border: 1px solid wheat; */
+ }
+
+@media screen and (max-width: 1225px) {
+
+  .heroGridWrapper{
+    overflow: hidden;
+    background: linear-gradient(to right , rgba(181, 181, 188, 0.45) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.432));
+    filter: blur(15%);
+  }
+  .heroGridLeft {
+    display: none;
+  }
+  .heroGridRight_Top {
+    grid-row: 1 / 4;
+    grid-column: 1 / 11;
+    border-radius: 15px;
+  }
+  .heroGridArticle {
+    grid-row: 4 /11;
+    grid-column: 1 / 11;
+  }
+
+  .heroGridLeftText {
+    /* position: absolute;  */
+    top: 0;
+    left: 0;
+    /* z-index: -1; */
+    opacity: 0.1;
+    pointer-events: none;
+    font-size: 4rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.1;
+  }
+  .AccomplishmentGroup{
+    font-size: 0.6rem;
+    padding: 0.1rem 0.7rem;
+  }
+  .heroAccomplishment {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 1.6rem;
+    margin-top: 0.5rem;
+  }
+  .RWDBackground{
+    position: absolute;
+    z-index: -1;
+    display: block;
+    opacity: 0.8;
+  }
+
+
 }
