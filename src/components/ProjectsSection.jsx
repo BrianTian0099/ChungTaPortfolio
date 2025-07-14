@@ -103,6 +103,7 @@ const ProjectsSection = () => {
         >
           UI/UX 
         </button>
+        <span className="tabArrow">⇄</span>
         <button
           className={`tab ${activeTab === "industrial" ? "active" : ""}`}
           onClick={() => {
