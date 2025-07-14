@@ -151,12 +151,12 @@
   grid-template-rows: repeat(10, 1fr);
   height: 80%;
   width: 100%;
-  background: linear-gradient(to right , rgba(181, 181, 188, 0.175) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.197));
-  /* border: 0.25px solid rgb(192, 141, 240); */
+  /* background: linear-gradient(to right , rgba(181, 181, 188, 0.175) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.197)); */
+  border: 0.25px solid rgb(192, 141, 240);
   /* background-color: rgba(185, 171, 171, 0.219); */
   border-radius: 15px;
   padding: 0.25rem;
-  box-shadow: 0.25px -0.2px 6px rgba(255, 255, 255, 0.573), -0.1px 0.2px 3px rgba(255, 255, 255, 0.547);
+  /* box-shadow: 0.25px -0.2px 6px rgba(255, 255, 255, 0.573), -0.1px 0.2px 3px rgba(255, 255, 255, 0.547); */
 }
 .heroGridLeft {
   position: relative;
@@ -169,12 +169,12 @@
     rgba(0, 0, 255, 0.334),
     rgba(90, 90, 255, 0.303)
   );
-  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+  /* box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255); */
 
   border-radius: 15px;
   padding: 1.5rem;
   margin: 5px;
-  border: 0.15px rgb(103, 104, 106) solid;
+  /* border: 0.15px rgb(103, 104, 106) solid; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,8 +235,8 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  border: 0.25px solid rgb(152, 198, 254);
-  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+  /* border: 0.25px solid rgb(152, 198, 254); */
+  /* box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255); */
   background-color: #00000d70;
 }
 .heroAccomplishment {
@@ -270,9 +270,9 @@
   flex-direction: column;
   /* align-items: center; */
   justify-content: left;
-  border: 0.2px solid rgb(106, 173, 255);
+  /* border: 0.2px solid rgb(106, 173, 255); */
   /* background-color: rgba(66, 66, 117, 0.183); */
-  box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255);
+  /* box-shadow: 0.25px -0.2px 6px rgb(255, 255, 255), -0.1px 0.2px 3px rgb(255, 255, 255); */
 
 }
 .heroGridArticle span {
@@ -302,7 +302,7 @@
 
   .heroGridWrapper{
     overflow: hidden;
-    background: linear-gradient(to right , rgba(181, 181, 188, 0.45) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.432));
+    /* background: linear-gradient(to right , rgba(181, 181, 188, 0.45) , rgba(168, 168, 169, 0.229), rgba(137, 137, 141, 0.432)); */
     filter: blur(15%);
   }
   .heroGridLeft {
@@ -333,8 +333,8 @@
     line-height: 1.1;
   }
   .AccomplishmentGroup{
-    font-size: 0.6rem;
-    padding: 0.1rem 0.7rem;
+    font-size: 0.5rem;
+    padding: 0.1rem 0.2rem;
   }
   .heroAccomplishment {
     display: flex;
@@ -346,11 +346,15 @@
     margin-top: 0.5rem;
   }
   .RWDBackground{
+    width: 100%;
+    overflow: hidden;
     position: absolute;
     z-index: -1;
     display: block;
     opacity: 0.8;
   }
-
+  .hero{
+    overflow: hidden;
+  }
 
 }
