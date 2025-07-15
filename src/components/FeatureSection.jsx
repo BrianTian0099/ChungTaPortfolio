@@ -10,7 +10,7 @@ const FeatureSection = () => {
 
   return (
     <section className="feature-section">
-      <h2 className="feature-title">設計探索</h2>
+      <h2 className="feature-title">我的專案</h2>
       <ul className="feature-list">
         {features.map((feature, index) => (
           <li key={index} className="feature-item">

@@ -41,12 +41,12 @@
   }
   
   @media screen and (max-width: 768px) {
-    .feature-title {
+    /* .feature-title {
       font-size: 3rem;
       font-weight: bold;
       margin-bottom: 20px;
-      color: #007bff; /* 藍色文字 */
-    }
+      color: #007bff; 
+    } */
     .feature-item {
       font-size: 0.8rem;
       margin-bottom: 10px;
