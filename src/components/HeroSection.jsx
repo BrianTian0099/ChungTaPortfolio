@@ -6,7 +6,14 @@ const HeroSection = () => {
     <section id="hero" className="hero">
       <div className="heroGridWrapper">
         <div className="heroGridLeft">
-          <div className="heroGridDraw"></div>
+          {/* <div className="heroGridDraw"></div> */}
+          <div className="bubbleSet">
+            <div className="bubble bubble1" />
+            <div className="bubble bubble2" />
+            <div className="bubble bubble3" />
+            <div className="bubble bubble4" />
+            <div className="bubble bubble5" />
+          </div>
           <div className="heroGridLeftText">
             <span>a learner</span>
             <span>a designer</span>
@@ -37,7 +44,9 @@ const HeroSection = () => {
             <br />
             我相信設計不只是美，更是一種「把複雜變簡單」的溝通與重構。
           </span>
-          <div className="heroNotice"><span>7月作品集持續優化中</span></div>
+          <div className="heroNotice">
+            <span>7月作品集持續優化中</span>
+          </div>
         </div>
       </div>
       <div className="RWDBackground">
