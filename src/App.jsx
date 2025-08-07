@@ -7,6 +7,7 @@ import ContactSection from "./components/ContactSection";
 import FeatureSection from "./components/FeatureSection";
 import MainPage from "./components/MainPage";
 import NavBar from "./components/NavBar";
+import Accomplishment from "./components/Accomplishment";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <HeroSection />
       {/* <AboutSection />  */}
       <SkillSection />
+      <Accomplishment/>
       <FeatureSection></FeatureSection>
       <ProjectsSection />
       <ArticlesSection />
