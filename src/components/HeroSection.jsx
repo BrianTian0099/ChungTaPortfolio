@@ -45,7 +45,7 @@ const HeroSection = () => {
             我相信設計不只是美，更是一種「把複雜變簡單」的溝通與重構。
           </span>
           <div className="heroNotice">
-            <span>7月作品集持續優化中</span>
+            <span>作品集持續優化中</span>
           </div>
         </div>
       </div>
